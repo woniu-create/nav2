@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+  /* text-decoration: none; */
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+body {
+  background: #eee;
+}
+.onShow{
+  display: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  opacity: .3;
+}
+.background{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  /* background: #eee; */
+  background-image: url(background.jpg);
+     /* 背景图垂直、水平均居中 */
+     background-position: center  center;
+     /* 背景图不平铺 */
+     background-repeat: no-repeat;
+     /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
+     background-attachment: fixed; 
+     /* 让背景图基于容器大小伸缩 */
+    background-size: cover;
+    
+    opacity: .9;
+    height: 100%;
+    width: 100%;
+}
+.globalHeader {
+  margin: 60px 20px 40px 10px;
+}
+.searchForm {
+  display: flex;
+  justify-content: space-between;
+}
+.globalHeader .searchForm > input {
+  height: 40px;
+  width: 100%;
+  border: none;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 50px;
+  padding: 0 10px;
+  outline: none;
+}
+.globalHeader .searchForm > button {
+  white-space: nowrap;
+  padding: 0 15px;
+  margin-left: 8px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+.globalMain > .Mainwrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.Mainwrapper li {
+  width: 83px;
+  margin: 10px 20px 0 25px;
+}
+.globalMain li > .wrapper {
+  width: 80px;
+  height: 80px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.globalMain .wrapper > .logo {
+  font-size: 44px;
+  font-weight: 500;
+}
+.Mainwrapper .text {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.Mainwrapper .addWrapper .iconWrapper {
+  font-size: 64px;
+  width: 80px;
+  height: 80px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper:hover .close{
+ display: block;
+ cursor: default;
+}
+.wrapper .close {
+  position: absolute;
+  top: 4px;
+  right: 14px;
+  display: none;
+}
+@media (min-width: 480px) {
+  /* body{
+    height: 100%;
+  } */
+  .globalHeader {
+    margin-top: 100px;
+    margin-bottom: 60px;
+  }
+  .searchForm {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .globalMain > .Mainwrapper{
+    max-width: 720px;
+
+  }
+  .Mainwrapper li {
+    width: 83px;
+    margin: 10px 10px 16px 44px;
+  }
+}
